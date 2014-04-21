@@ -57,7 +57,7 @@
       <hr />
       <div class="row">
       	<div class="col-md-12">
-      		<h2>Angular JS</h2>
+      		<h2>Angular JS Basics</h2>
       		<p></p>
       		<h3>Scope</h3>
       		<p>The scope is the </p>
@@ -102,13 +102,25 @@
       		</pre>
       		<h5>scope</h5>
       		<p>The scope property allows you to define whether or not you want to have a new scope screated for the directive or if you want to use the parent scope. <strong>scope</strong> is returned as a boolean</p>
+      		<pre class="prettyprint">
+	app.directive('formatNumber' function(){
+		return {
+			restrict: "A",
+			scope: false,
+			link: function(scope,elem,attrs) {
+				$(elem).plugin();
+			}
+		};
+	});
+      		</pre>
       		<h5>templateUrl</h5>
       		<p>the template property allows your to define a snippet of html that will replace the element where your directive is called. you can add angular hooks here and even other directives that wil lget preprocessed when they come into the page.</p>
       		<pre class="prettyprint">
 	app.directive('formatNumber' function(){
 		return {
 			restrict: "A",
-			templateUrl: "listitemTemplate.html"
+			scope: false,
+			templateUrl: "listitemTemplate.html",
 			link: function(scope,elem,attrs) {
 				$(elem).plugin();
 			}
@@ -121,8 +133,9 @@
 	app.directive('formatNumber' function(){
 		return {
 			restrict: "A",
+			scope: false,
 			templateUrl: "listitemTemplate.html",
-			transclude:false,
+			transclude:true,
 			link: function(scope,elem,attrs) {
 				$(elem).plugin();
 			}
