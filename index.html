@@ -69,6 +69,7 @@
       		<h4>Why Use a directive?</h4>
       		<p>directives are what angular is built on. mostly all angular functionality is attached via the directive. Directives allow you to extend the functionality of an element using javascript. Directives also allow you to create your own elements and transform them on the page. </p>
       		<h4>Setting up a directive</h4>
+      		<h5>Markup</h5>
       		<pre class="prettyprint">
 	app.directive('formatNumber' function(){
 		return {
@@ -81,11 +82,14 @@
       		<h5>restrict</h5>
       		<p></p>
       		<h5>scope</h5>
-      		<p></p>
+      		<p>The scope property allows you to define whether or not you want to have a new scope screated for the directive or if you want to use the parent scope. <strong>scope</strong> is returned as a boolean</p>
       		<h5>template</h5>
       		<p></p>
       		<h5>transclude</h5>
-      		<p></p>
+      		<p>the transclude property allows you to replace the content of an element where the directive is placed. usually when you transclude an element you provide a template that you will use to replace the current markup. <strong>transclude</strong> is returned as a boolean</p>
+      		<pre class="prettyprint">
+
+      		</pre>
       		<h4>Using the Directive</h4>
       		<p></p>
       		<p></p>
