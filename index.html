@@ -70,9 +70,13 @@
       		<p>directives are what angular is built on. mostly all angular functionality is attached via the directive. Directives allow you to extend the functionality of an element using javascript. Directives also allow you to create your own elements and transform them on the page. </p>
       		<h4>Setting up a directive</h4>
       		<pre class="prettyprint">
-      			app.directive('formatNumber' function(){
-      				hello
-      			});
+	app.directive('formatNumber' function(){
+		return {
+			link: function(scope,elem,attrs) {
+				$(elem).plugin();
+			}
+		}
+	});
       		</pre>
       		<p></p>
       		<h4>Using the Directive</h4>
