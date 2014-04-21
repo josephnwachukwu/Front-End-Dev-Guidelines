@@ -84,8 +84,11 @@
       		<h5>restrict</h5>
       		<p>Since you can add a directive so many different ways, the restrict property defines how you can add a directive on a page. directives are allowed to be placed in as attributes on elements by default. but maybe you want to add the directive as its own element and bring in a preformatted template that you have in an html file. here are the diffrent values for restrict.
 			<ul>
-				<li>restrict: A  - </li>
+				<li>restrict: "A" - will call the directive if it is referenced in the attribute of the element</li>
+				<li>restrict: "E" - will call the directive if it is reterenced as the element name</li>
+				<li>restrict: "C" - will call the directive if it is referenced as the class of the element</li>
 			</ul>
+			you can also combine any of the letters if you want multiple matches.
       		</p>
       		<h5>scope</h5>
       		<p>The scope property allows you to define whether or not you want to have a new scope screated for the directive or if you want to use the parent scope. <strong>scope</strong> is returned as a boolean</p>
