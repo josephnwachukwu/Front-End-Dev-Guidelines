@@ -66,6 +66,8 @@
       		<h4>Includes vs Templates</h4>
       		<p></p>
       		<h3>Directives</h3>
+      		<h4>What exactly is a directive</h4>
+      		<p></p>
       		<h4>Why Use a directive?</h4>
       		<p>directives are what angular is built on. mostly all angular functionality is attached via the directive. Directives allow you to extend the functionality of an element using javascript. Directives also allow you to create your own elements and transform them on the page. </p>
       		<h4>Setting up a directive</h4>
@@ -88,7 +90,14 @@
       		<h5>transclude</h5>
       		<p>the transclude property allows you to replace the content of an element where the directive is placed. usually when you transclude an element you provide a template that you will use to replace the current markup. <strong>transclude</strong> is returned as a boolean</p>
       		<pre class="prettyprint">
-
+	app.directive('formatNumber' function(){
+		return {
+			transclude:false,
+			link: function(scope,elem,attrs) {
+				$(elem).plugin();
+			}
+		};
+	});
       		</pre>
       		<h4>Using the Directive</h4>
       		<p></p>
