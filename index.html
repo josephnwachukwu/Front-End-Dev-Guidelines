@@ -44,7 +44,7 @@
           <h4>Package.json</h4>
           <p>When you run an npm install node looks for your package.json and installs all your dependencies that you have listed</p>
           <pre class="prettyprint">
-          	{
+			{
 				"name": "Joes Dev GuideLines",
 				"version": "1.0.0",
 				"devDependencies": {
@@ -74,8 +74,23 @@
       	<div class="col-md-12">
       		<h2>Angular JS Basics</h2>
       		<p></p>
+      		<h3>Controllers</h3>
+      		<p><p>
+      		<pre class="prettyprint">
+      			app.controller('homePageCtrl', function($scope){
+      				$scope.message = "hello World";
+      			})
+      		</pre>
+      		<p>You can access it on the page in many ways</p>
+      		<pre class="prettyprint">
+      			<span>{{message}}</span>
+      		</pre>
+      		<pre class="prettyprint">
+      			<span data-ng-bind="message"></span>
+      		</pre>
       		<h3>Scope</h3>
-      		<p>The scope is the </p>
+      		<p>The scope is the main object for each controller that you call. </p>
+
       		<h3>Views</h3>
       		<p></p>
       		<h4>Includes vs Templates</h4>
