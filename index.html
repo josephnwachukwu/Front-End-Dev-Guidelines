@@ -110,9 +110,9 @@ The reason for using css3 transformations over javascript animations is performa
 <h2>Javascript </h2>
 <h3>ES5, ES6, Typescript</h3>
 <ul>
-  <li>ES5 is the JavaScript you know and use in the browser today it is what it is and does not require a build step to transform it into something that will run in today's browsers</li>
-  <li>ES6 is the next iteration of JavaScript, but it does not run in today's browsers. There are quite a few transpilers that will export ES5 for running in browsers. It is still an dynamic (read: untyped) language.</li>
-  <li>TypeScript provides an optional typing system while pulling in features from future versions of JavaScript (ES6 and ES7).</li>
+  <li><strong>ES5</strong> is the JavaScript you know and use in the browser today it is what it is and does not require a build step to transform it into something that will run in today's browsers</li>
+  <li><strong>ES6</strong> is the next iteration of JavaScript, but it does not run in today's browsers. There are quite a few transpilers that will export ES5 for running in browsers. It is still an dynamic (read: untyped) language.</li>
+  <li><strong>TypeScript</strong> provides an optional typing system while pulling in features from future versions of JavaScript (ES6 and ES7).</li>
 </ul>
 <blockquote>Note: a lot of the transpilers out there (i.e. babel, TypeScript) will allow you to use features from future versions of JavaScript today and exporting code that will still run in today's browsers.</blockquote>
 Loading in <head> vs <body>
@@ -148,13 +148,13 @@ for (var i = 0, len = arr.length; i < len; i++) {
 <h3>Development code is not live code</h3>
 Code should be minimized and stripped of all comments. Using something like jsLint.
 <h3>CDN vs Local Concatenated Files</h3>
-The value of a CDN lies in the likelihood of the user having already visited another site calling that same file from that CDN, and becomes increasingly valuable depending on the size of the file. The likelihood of this being the case increases with the ubiquity of the file being requested and the popularity of the CDN.
+<p>The value of a CDN lies in the likelihood of the user having already visited another site calling that same file from that CDN, and becomes increasingly valuable depending on the size of the file. The likelihood of this being the case increases with the ubiquity of the file being requested and the popularity of the CDN.</p>
 
-With this in mind, pulling a relatively large and popular file from a popular CDN makes absolute sense. jQuery, and, to a lesser degree, jQuery UI, fit this bill.
+<p>With this in mind, pulling a relatively large and popular file from a popular CDN makes absolute sense. jQuery, and, to a lesser degree, jQuery UI, fit this bill.</p>
 
-Meanwhile, concatenating files makes sense for smaller files which are not likely to change much — your commonly used plugins will fit this bill, but your core application-specific code probably doesn't: it might change from week to week, and if you're concatenating it with all your other files, you'd have to force the user to download everything all over again.
+<p>Meanwhile, concatenating files makes sense for smaller files which are not likely to change much — your commonly used plugins will fit this bill, but your core application-specific code probably doesn't: it might change from week to week, and if you're concatenating it with all your other files, you'd have to force the user to download everything all over again.</p>
 
-I actually split it half and half. I get the popular stuff from the cdn like jQuery, Angular, Modernizr etc. Then i concat all my js and various third party plugins. 
+<p>I actually split it half and half. I get the popular stuff from the cdn like jQuery, Angular, Modernizr etc. Then i concat all my js and various third party plugins. </p>
 
 <h2>Node best practices</h2>
 <h3>Start with npm init</h3>
