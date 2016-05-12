@@ -42,10 +42,10 @@
     </div>
     <div class="container">
       <div class="row">
-        <div class="col-md-2">
+        <div class="col-md-3">
             
         </div>
-        <div class="col-md-10">
+        <div class="col-md-9">
             <strong>Your code should be readable by anyone even a person who doesnt code should be able to tell what your code does by looking at it.</strong>
 <h2>Accessibility</h2> 
 <h3>DOCTYPE</h3> 
@@ -62,18 +62,21 @@ A page can only have a single charset
 Don't use meta tags for copyrights instead use link
 <link rel=”copyright” href=”copyright.html”>
 <h3>Open Graph</h3>
+<code>
 <meta property=”og:title” content=”my site”>
 <meta property=”og:image” content=”image.jpg>
 <meta property=”og:description” content=”description here please”>
-
+</code>
 <h3>Web Application Icons</h3>
 To specify an icon for a bookmarked web page on your iphone or ipad use link 
+<code>
 <link rel=”apple-touch-icon” href=”icon.png>
-
+</code>
 You can also specify sizes for different resolutions
+<code>
 <link rel=”apple-touch-icon” sizes=”120x120”  href=”icon.png>
 <link rel=”apple-touch-icon” sizes=”152x152” href=”icon.png>
-
+</code>
 For android devices you should link to the manifest using link.
 <link rel=”manifest” href=”manifest.json”>
 <h3>Use the data- prefix on custom attributes</h3>
@@ -142,9 +145,9 @@ for (var i = 0, len = arr.length; i < len; i++) {
    //code here
 }
 
-Development code is not live code
+<h3>Development code is not live code</h3>
 Code should be minimized and stripped of all comments. Using something like jsLint.
-CDN vs Local Concatenated Files
+<h3>CDN vs Local Concatenated Files</h3>
 The value of a CDN lies in the likelihood of the user having already visited another site calling that same file from that CDN, and becomes increasingly valuable depending on the size of the file. The likelihood of this being the case increases with the ubiquity of the file being requested and the popularity of the CDN.
 
 With this in mind, pulling a relatively large and popular file from a popular CDN makes absolute sense. jQuery, and, to a lesser degree, jQuery UI, fit this bill.
@@ -153,17 +156,17 @@ Meanwhile, concatenating files makes sense for smaller files which are not likel
 
 I actually split it half and half. I get the popular stuff from the cdn like jQuery, Angular, Modernizr etc. Then i concat all my js and various third party plugins. 
 
-Node best practices
-Start with npm init
+<h2>Node best practices</h2>
+<h3>Start with npm init</h3>
 This builds you valid package.json for your project, inferring common properties from the working directory.
-Watch your modules
+<h3>Watch your modules</h3>
 When you are in development you may want your apps node modules to update but when the app is out in production drifting modules can be dangerous. Especially if a develope pulls a module out or changes something drastic. 
-Simplify your build
+<h3>Simplify your build</h3>
 Rather than picking between the best task runner or inheriting large complex build try and simplify your build by using a ‘vanilla’ build without bower, gulp, or grunt.
-Production Ready Code and Deliverables
-Minifying and linting code 
+<h2>Production Ready Code and Deliverables</h2>
+<h3>Minifying and linting code</h3> 
 Use the <script> tag to include your JavaScript files at the bottom of your HTML document just before the closing </body> tag. For optimal page performance, concatenate your JavaScript into as few files as possible.
-Use external JavaScript files. 
+h3Use external JavaScript files. 
 Do NOT include JavaScript in-line in the page unless there is a good reason.
 Using package managers
 There are several package managers out there
