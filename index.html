@@ -111,20 +111,22 @@ The reason for using css3 transformations over javascript animations is performa
 
 <h2>Javascript </h2>
 <h3>ES5, ES6, Typescript</h3>
-ES5 is the JavaScript you know and use in the browser today it is what it is and does not require a build step to transform it into something that will run in today's browsers
-ES6 is the next iteration of JavaScript, but it does not run in today's browsers. There are quite a few transpilers that will export ES5 for running in browsers. It is still an dynamic (read: untyped) language.
-TypeScript provides an optional typing system while pulling in features from future versions of JavaScript (ES6 and ES7).
-Note: a lot of the transpilers out there (i.e. babel, TypeScript) will allow you to use features from future versions of JavaScript today and exporting code that will still run in today's browsers.
+<ul>
+  <li>ES5 is the JavaScript you know and use in the browser today it is what it is and does not require a build step to transform it into something that will run in today's browsers</li>
+  <li>ES6 is the next iteration of JavaScript, but it does not run in today's browsers. There are quite a few transpilers that will export ES5 for running in browsers. It is still an dynamic (read: untyped) language.</li>
+  <li>TypeScript provides an optional typing system while pulling in features from future versions of JavaScript (ES6 and ES7).</li>
+</ul>
+<blockquote>Note: a lot of the transpilers out there (i.e. babel, TypeScript) will allow you to use features from future versions of JavaScript today and exporting code that will still run in today's browsers.</blockquote>
 Loading in <head> vs <body>
 Put scripts in the <head> when they should happen before the page starts being rendered. Examples are things like HTML5 shim libraries or Modernizr.
 
 Put scripts in "ready" handlers when there's limited control over how the script is imported. Things like utilities that can be included on a page to unobtrusively add features generally use "ready" handlers because they can't be sure of how they'll be used.
 
 Put scripts at the end of the <body> if you can get away with it in all other cases.
-Always use the ‘use strict” directive 
+<h3>Always use the ‘use strict” directive </h3>
 The "use strict" directive is a literal expression ignored by earlier versions of JavaScript before 1.8.5 (ECMAScript version 5). The purpose of "use strict" is to indicate that the code should be executed in "strict mode". 
 
-Avoid globals
+<h3>Avoid globals</h3>
 Everyone knows you're not supposed to use the global scope for functions and variables because every js file loaded uses the same scope. Function names and variables can clash and be overwritten with your stuff. Use an object literal instead
 
 var header = {
