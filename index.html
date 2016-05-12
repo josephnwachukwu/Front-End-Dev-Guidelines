@@ -46,7 +46,139 @@
             
         </div>
         <div class="col-md-10">
-            
+            <strong>Your code should be readable by anyone even a person who doesnt code should be able to tell what your code does by looking at it.</strong>
+<h2>Accessibility</h2> 
+<h3>DOCTYPE</h3> 
+Doctype should always be present in all HTML documents although it's really not required. 
+<!DOCTYPE html>
+<html lang=”en”>
+Meta tags
+<meta name=”author” content=”Joseph Nwachukwu”>
+<meta name=”description” content=”description about the page”>
+
+A page can only have a single charset
+<meta charset=”UTF-8”>
+
+Don't use meta tags for copyrights instead use link
+<link rel=”copyright” href=”copyright.html”>
+Open Graph
+<meta property=”og:title” content=”my site”>
+<meta property=”og:image” content=”image.jpg>
+<meta property=”og:description” content=”description here please”>
+
+Web Application Icons
+To specify an icon for a bookmarked web page on your iphone or ipad use link 
+<link rel=”apple-touch-icon” href=”icon.png>
+
+You can also specify sizes for different resolutions
+<link rel=”apple-touch-icon” sizes=”120x120”  href=”icon.png>
+<link rel=”apple-touch-icon” sizes=”152x152” href=”icon.png>
+
+For android devices you should link to the manifest using link.
+<link rel=”manifest” href=”manifest.json”>
+Use the data- prefix on custom attributes
+You should always use the data prefix on custom attributes.
+<span data-current-value=”1234”>3456</span>
+Don’t forget the alt tag in images
+<img src=”logo.png” alt=”logo.png”>
+Always use quotes around attributes.
+Even though quotes are optional in html5, it's better to use them for consistency and to avoid confusing the browser with attributes that contain white space.
+<button class=”btn btn-primary”>click me</button>
+CSS
+Avoid using inline styles
+You don't want to have to change code in many places.
+Avoid using the important! tag
+You should not use the important tag because it interferes with the natural hierarchy of css selectors. 
+Less vs Sass vs Stylus
+All three are CSS preprocessors. Less and sass use regular css syntax while styus omits brackets and colons.
+Use BEM! 
+BEM Block Element Modifier is a methodology that helps speed development individually and in teams by making code much more readable and by making css styles easier to group. Bem can also be applied to other computer problems like file systems.
+
+/* Block component */
+.btn {}
+
+/* Element that depends upon the block */ 
+.btn__cancel {}
+
+/* Modifier that changes the style of the block */
+.btn--danger {} 
+.btn--big {}
+Always use transitions over javascript animations
+The reason for using css3 transformations over javascript animations is performance. First of all you offload all the graphics calculations to a different thread. Because css3 uses hardware acceleration you will be using the GPU instead. The performance increase is not much but it is some. Not all css animations benefit from the GPU boost also Transforms (scale, rotation, translation, and skew) and opacity are the main processes that use it.
+
+Javascript 
+ES5, ES6, Typescript
+ES5 is the JavaScript you know and use in the browser today it is what it is and does not require a build step to transform it into something that will run in today's browsers
+ES6 is the next iteration of JavaScript, but it does not run in today's browsers. There are quite a few transpilers that will export ES5 for running in browsers. It is still an dynamic (read: untyped) language.
+TypeScript provides an optional typing system while pulling in features from future versions of JavaScript (ES6 and ES7).
+Note: a lot of the transpilers out there (i.e. babel, TypeScript) will allow you to use features from future versions of JavaScript today and exporting code that will still run in today's browsers.
+Loading in <head> vs <body>
+Put scripts in the <head> when they should happen before the page starts being rendered. Examples are things like HTML5 shim libraries or Modernizr.
+
+Put scripts in "ready" handlers when there's limited control over how the script is imported. Things like utilities that can be included on a page to unobtrusively add features generally use "ready" handlers because they can't be sure of how they'll be used.
+
+Put scripts at the end of the <body> if you can get away with it in all other cases.
+Always use the ‘use strict” directive 
+The "use strict" directive is a literal expression ignored by earlier versions of JavaScript before 1.8.5 (ECMAScript version 5). The purpose of "use strict" is to indicate that the code should be executed in "strict mode". 
+
+Avoid globals
+Everyone knows you're not supposed to use the global scope for functions and variables because every js file loaded uses the same scope. Function names and variables can clash and be overwritten with your stuff. Use an object literal instead
+
+var header = {
+    Init: function() {},
+    Login: function() {},
+    userId:null
+};
+
+Yes its a pain sometimes to have to use the namespace prefix before you call your function 
+
+header.init()
+
+But it's better coding.
+Always cache the array length when looping through an array.
+You don't want to keep calculating array length each time you go through the for loop and sometimes the array is manipulated and the length changes.
+
+for (var i = 0, len = arr.length; i < len; i++) {
+   //code here
+}
+
+Development code is not live code
+Code should be minimized and stripped of all comments. Using something like jsLint.
+CDN vs Local Concatenated Files
+The value of a CDN lies in the likelihood of the user having already visited another site calling that same file from that CDN, and becomes increasingly valuable depending on the size of the file. The likelihood of this being the case increases with the ubiquity of the file being requested and the popularity of the CDN.
+
+With this in mind, pulling a relatively large and popular file from a popular CDN makes absolute sense. jQuery, and, to a lesser degree, jQuery UI, fit this bill.
+
+Meanwhile, concatenating files makes sense for smaller files which are not likely to change much — your commonly used plugins will fit this bill, but your core application-specific code probably doesn't: it might change from week to week, and if you're concatenating it with all your other files, you'd have to force the user to download everything all over again.
+
+I actually split it half and half. I get the popular stuff from the cdn like jQuery, Angular, Modernizr etc. Then i concat all my js and various third party plugins. 
+
+Node best practices
+Start with npm init
+This builds you valid package.json for your project, inferring common properties from the working directory.
+Watch your modules
+When you are in development you may want your apps node modules to update but when the app is out in production drifting modules can be dangerous. Especially if a develope pulls a module out or changes something drastic. 
+Simplify your build
+Rather than picking between the best task runner or inheriting large complex build try and simplify your build by using a ‘vanilla’ build without bower, gulp, or grunt.
+Production Ready Code and Deliverables
+Minifying and linting code 
+Use the <script> tag to include your JavaScript files at the bottom of your HTML document just before the closing </body> tag. For optimal page performance, concatenate your JavaScript into as few files as possible.
+Use external JavaScript files. 
+Do NOT include JavaScript in-line in the page unless there is a good reason.
+Using package managers
+There are several package managers out there
+
+W3C Compliance, WAI-ARIA Compliance and 508 Compliance
+“WAI-ARIA, the Accessible Rich Internet Applications Suite, defines a way to make Web content and Web applications more accessible to people with disabilities. It especially helps with dynamic content and advanced user interface controls developed with Ajax, HTML, JavaScript, and related technologies.”
+
+First of all what is section 508? Section 508, an amendment to the United States Workforce Rehabilitation Act of 1973, is a federal law mandating that all electronic and information technology developed, procured, maintained, or used by the federal government be accessible to people with disabilities.
+
+Section 508 compliance is really important especially if you are working a government site since most government sites require section 508 compliance.
+Domain Sharding
+
+What is clean code and how do i achieve it?
+
+Graceful Degradation
         </div>
       </div>
     </div>
