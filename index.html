@@ -27,171 +27,28 @@
     </div>
     <div class="jumbotron">
       <div class="container">
-        <h2>Manifesto</h2>
-        <p></p>
+        <div class="row">
+          <div class="col-md-12">
+            <h1>Front End Dev Guidelines and Best Practices</h1>
+            <p>This document contains what i believe to be the best practices for front-end web development Each item here represents either:</p>
+            <ol>
+              <li>A reminder to follow existing standards or industry conventions,</li>
+              <li>guidance on what constitutes professional patterns and organization, or</li>
+              <li>a decision I have made favoring one method over its alternatives.</li>
+            </ol>
+          </div>
+        </div>
       </div>
     </div>
     <div class="container">
-      <!-- Example row of columns -->
       <div class="row">
-        <div class="col-md-12">
-          <h2>My Stack</h2>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <h3>Node.js</h3>
-          <p></p>
-          <h4>Node Package Manager(NPM)</h4>
-          <h3>GruntJs</h3>
-          <h4>Package.json</h4>
-          <p>When you run an npm install node looks for your package.json and installs all your dependencies that you have listed</p>
-          <pre class="prettyprint">
-	{
-		"name": "Joes Dev GuideLines",
-		"version": "1.0.0",
-		"devDependencies": {
-			"grunt": "~0.4.0",
-			"grunt-contrib-jshint": "~0.9.2",
-			"grunt-contrib-uglify": "~0.4.0",
-			"grunt-contrib-watch": "~0.6.1",
-			"grunt-contrib-concat": "~0.3.0",
-			"grunt-contrib-less": "~0.11.0"
-		}
-	}
-          </pre>
-          <p></p>
-          <h4>gruntfile.js</h4>
-          <h4>grunt-contribs</h4>
-          <p></p>
-          <h3>Bootstrap</h3>
-          <p></p>
-          <h3>AngularJS</h3>
-          <p></p>
-          <h3>Folder Structure</h3>
-          <p></p>
+        <div class="col-md-2">
+            
+        </div>
+        <div class="col-md-10">
+            
         </div>
       </div>
-      <hr />
-      <div class="row">
-      	<div class="col-md-12">
-      		<h2>Angular JS Basics</h2>
-      		<p></p>
-      		<h3>Controllers</h3>
-      		<p><p>
-      		<pre class="prettyprint">
-	app.controller('homePageCtrl', function($scope){
-		$scope.message = "hello World";
-	})
-      		</pre>
-      		<p>You can access it on the page in many ways</p>
-      		<pre class="prettyprint">
-      			<span>{{message}}</span>
-      		</pre>
-      		<pre class="prettyprint">
-      			<span data-ng-bind="message"></span>
-      		</pre>
-      		<h3>Scope</h3>
-      		<p>The scope is the main object for each controller that you call. </p>
-
-      		<h3>Views</h3>
-      		<p></p>
-      		<h4>Includes vs Templates</h4>
-      		<p></p>
-      		<h3>Directives</h3>
-      		<h4>What exactly is a directive</h4>
-      		<p></p>
-      		<h4>Why Use a directive?</h4>
-      		<p>directives are what angular is built on. mostly all angular functionality is attached via the directive. Directives allow you to extend the functionality of an element using javascript. Directives also allow you to create your own elements and transform them on the page. </p>
-      		<h4>Setting up a directive</h4>
-      		<h5>Markup</h5>
-      		<pre class="prettyprint">
-	app.directive('formatNumber' function(){
-		return {
-			link: function(scope,elem,attrs) {
-				$(elem).plugin();
-			}
-		};
-	});
-      		</pre>
-      		<h5>restrict</h5>
-      		<p>Since you can add a directive so many different ways, the restrict property defines how you can add a directive on a page. directives are allowed to be placed in as attributes on elements by default. but maybe you want to add the directive as its own element and bring in a preformatted template that you have in an html file. here are the diffrent values for restrict.
-			<ul>
-				<li>restrict: "A" - will call the directive if it is referenced in the attribute of the element</li>
-				<li>restrict: "E" - will call the directive if it is reterenced as the element name</li>
-				<li>restrict: "C" - will call the directive if it is referenced as the class of the element</li>
-			</ul>
-			you can also combine any of the letters if you want multiple matches.
-      		</p>
-      		<pre class="prettyprint">
-	app.directive('formatNumber' function(){
-		return {
-			restrict: "A",
-			link: function(scope,elem,attrs) {
-				$(elem).plugin();
-			}
-		};
-	});
-      		</pre>
-      		<h5>scope</h5>
-      		<p>The scope property allows you to define whether or not you want to have a new scope screated for the directive or if you want to use the parent scope. <strong>scope</strong> is returned as a boolean</p>
-      		<pre class="prettyprint">
-	app.directive('formatNumber' function(){
-		return {
-			restrict: "A",
-			scope: false,
-			link: function(scope,elem,attrs) {
-				$(elem).plugin();
-			}
-		};
-	});
-      		</pre>
-      		<h5>templateUrl</h5>
-      		<p>the template property allows your to define a snippet of html that will replace the element where your directive is called. you can add angular hooks here and even other directives that wil lget preprocessed when they come into the page.</p>
-      		<pre class="prettyprint">
-	app.directive('formatNumber' function(){
-		return {
-			restrict: "A",
-			scope: false,
-			templateUrl: "listitemTemplate.html",
-			link: function(scope,elem,attrs) {
-				$(elem).plugin();
-			}
-		};
-	});
-      		</pre>
-      		<h5>transclude</h5>
-      		<p>the transclude property allows you to replace the content of an element where the directive is placed. usually when you transclude an element you provide a template that you will use to replace the current markup. <strong>transclude</strong> is returned as a boolean</p>
-      		<pre class="prettyprint">
-	app.directive('formatNumber' function(){
-		return {
-			restrict: "A",
-			scope: false,
-			templateUrl: "listitemTemplate.html",
-			transclude:true,
-			link: function(scope,elem,attrs) {
-				$(elem).plugin();
-			}
-		};
-	});
-      		</pre>
-      		<h4>Using the Directive</h4>
-      		<p></p>
-      		<p></p>
-      		<h3>Services</h3>
-      		<p></p>
-      		<h3>$watch how we $apply things to the $scope</h3>
-      		<p></p>
-      		<h3>Routes</h3>
-      		<p></p>
-      		<h3>$http</h3>
-      		<h4>post</h4>
-      		<p></p>
-      		<h4>get</h4>
-      		<p></p>
-      	</div>
-      </div>
-      <hr>
-      <footer>
-        <p>&copy; Company 2014 Joseph Nwachukwu | Genisystems</p>
-      </footer>
     </div>
 </body>
 </html>
