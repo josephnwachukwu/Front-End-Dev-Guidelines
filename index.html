@@ -85,13 +85,13 @@ Always use quotes around attributes.
 Even though quotes are optional in html5, it's better to use them for consistency and to avoid confusing the browser with attributes that contain white space.
 <button class=”btn btn-primary”>click me</button>
 <h2>CSS</h2>
-Avoid using inline styles
+<h3>Avoid using inline styles</h3>
 You don't want to have to change code in many places.
-Avoid using the important! tag
+<h3>Avoid using the important! tag</h3>
 You should not use the important tag because it interferes with the natural hierarchy of css selectors. 
-Less vs Sass vs Stylus
+<h3>Less vs Sass vs Stylus</h3>
 All three are CSS preprocessors. Less and sass use regular css syntax while styus omits brackets and colons.
-Use BEM! 
+<h3>Use BEM! </h3>
 BEM Block Element Modifier is a methodology that helps speed development individually and in teams by making code much more readable and by making css styles easier to group. Bem can also be applied to other computer problems like file systems.
 
 /* Block component */
@@ -103,11 +103,11 @@ BEM Block Element Modifier is a methodology that helps speed development individ
 /* Modifier that changes the style of the block */
 .btn--danger {} 
 .btn--big {}
-Always use transitions over javascript animations
+<h3>Always use transitions over javascript animations</h3>
 The reason for using css3 transformations over javascript animations is performance. First of all you offload all the graphics calculations to a different thread. Because css3 uses hardware acceleration you will be using the GPU instead. The performance increase is not much but it is some. Not all css animations benefit from the GPU boost also Transforms (scale, rotation, translation, and skew) and opacity are the main processes that use it.
 
-Javascript 
-ES5, ES6, Typescript
+<h2>Javascript </h2>
+<h3>ES5, ES6, Typescript</h3>
 ES5 is the JavaScript you know and use in the browser today it is what it is and does not require a build step to transform it into something that will run in today's browsers
 ES6 is the next iteration of JavaScript, but it does not run in today's browsers. There are quite a few transpilers that will export ES5 for running in browsers. It is still an dynamic (read: untyped) language.
 TypeScript provides an optional typing system while pulling in features from future versions of JavaScript (ES6 and ES7).
