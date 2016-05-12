@@ -41,7 +41,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-3">
-            <<ul>
+            <ul>
               <li><a href="">Accessibility</a>
                 <ul>
                   <li><a href="">DOCTYPE</a></li>
@@ -113,25 +113,25 @@ You can also specify sizes for different resolutions
 </pre>
 For android devices you should link to the manifest using link.
 <pre>
-  <link rel=”manifest” href=”manifest.json”>
+  &lt;link rel=&rdquo;manifest&rdquo; href=&rdquo;manifest.json&rdquo;&gt;
 </pre>
 
 <h3>Use the data- prefix on custom attributes</h3>
 <p>You should always use the data prefix on custom attributes.</p>
 <pre>
-  <span data-current-value=”1234”>3456</span>
+  &lt;span data-current-value=&rdquo;1234&rdquo;&gt;3456&lt;/span&gt;
 </pre>
 
 <h3>Don’t forget the alt tag in images</h3>
 <pre>
-  <img src=”logo.png” alt=”logo.png”>
+  &lt;img src=&rdquo;logo.png&rdquo; alt=&rdquo;logo.png&rdquo;&gt;
 </pre>
 <h3>Always use quotes around attributes.</h3>
 <p>
   Even though quotes are optional in html5, it's better to use them for consistency and to avoid confusing the browser with attributes that contain white space.
 </p>
 <pre>
-  <button class=”btn btn-primary”>click me</button>
+  &lt;button class=&rdquo;btn btn-primary&rdquo;&gt;click me&lt;/button&gt;
 </pre>
 
 <h2>CSS</h2>
@@ -185,7 +185,7 @@ Put scripts in the <head> when they should happen before the page starts being r
 </p>
 
 
-Put scripts at the end of the <body> if you can get away with it in all other cases.
+Put scripts at the end of the &lt;body&gt; if you can get away with it in all other cases.
 <h3>Always use the ‘use strict” directive </h3>
 The "use strict" directive is a literal expression ignored by earlier versions of JavaScript before 1.8.5 (ECMAScript version 5). The purpose of "use strict" is to indicate that the code should be executed in "strict mode". 
 
