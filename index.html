@@ -70,7 +70,8 @@
             <strong>Your code should be readable by anyone even a person who doesnt code should be able to tell what your code does by looking at it.</strong>
 <h2>Accessibility</h2> 
 <h3>DOCTYPE</h3> 
-Doctype should always be present in all HTML documents although it's really not required. 
+<p>Doctype should always be present in all HTML documents although it's really not required. </p>
+
 <pre>
   &lt;!DOCTYPE html&gt;
   &lt;html lang=&rdquo;en&rdquo;&gt;
@@ -101,7 +102,7 @@ Don't use meta tags for copyrights instead use link
 </pre>
 
 <h3>Web Application Icons</h3>
-To specify an icon for a bookmarked web page on your iphone or ipad use link 
+<p>To specify an icon for a bookmarked web page on your iphone or ipad use link</p>
 <pre>
   &lt;link rel=&rdquo;apple-touch-icon&rdquo; href=&rdquo;icon.png&gt;
 </pre>
@@ -111,36 +112,62 @@ You can also specify sizes for different resolutions
   &lt;link rel=&rdquo;apple-touch-icon&rdquo; sizes=&rdquo;152x152&rdquo; href=&rdquo;icon.png&gt;
 </pre>
 For android devices you should link to the manifest using link.
-<link rel=”manifest” href=”manifest.json”>
+<pre>
+  <link rel=”manifest” href=”manifest.json”>
+</pre>
+
 <h3>Use the data- prefix on custom attributes</h3>
-You should always use the data prefix on custom attributes.
-<span data-current-value=”1234”>3456</span>
+<p>You should always use the data prefix on custom attributes.</p>
+<pre>
+  <span data-current-value=”1234”>3456</span>
+</pre>
+
 <h3>Don’t forget the alt tag in images</h3>
-<img src=”logo.png” alt=”logo.png”>
-Always use quotes around attributes.
-Even though quotes are optional in html5, it's better to use them for consistency and to avoid confusing the browser with attributes that contain white space.
-<button class=”btn btn-primary”>click me</button>
+<pre>
+  <img src=”logo.png” alt=”logo.png”>
+</pre>
+<h3>Always use quotes around attributes.</h3>
+<p>
+  Even though quotes are optional in html5, it's better to use them for consistency and to avoid confusing the browser with attributes that contain white space.
+</p>
+<pre>
+  <button class=”btn btn-primary”>click me</button>
+</pre>
+
 <h2>CSS</h2>
 <h3>Avoid using inline styles</h3>
-You don't want to have to change code in many places.
+<p>You don't want to have to change code in many places.</p>
+
 <h3>Avoid using the important! tag</h3>
-You should not use the important tag because it interferes with the natural hierarchy of css selectors. 
+<p>You should not use the important tag because it interferes with the natural hierarchy of css selectors.</p>
+ 
 <h3>Less vs Sass vs Stylus</h3>
-All three are CSS preprocessors. Less and sass use regular css syntax while styus omits brackets and colons.
+<p>All three are CSS preprocessors. Less and sass use regular css syntax while styus omits brackets and colons.</p>
+
 <h3>Use BEM! </h3>
-BEM Block Element Modifier is a methodology that helps speed development individually and in teams by making code much more readable and by making css styles easier to group. Bem can also be applied to other computer problems like file systems.
+<p>BEM Block Element Modifier is a methodology that helps speed development individually and in teams by making code much more readable and by making css styles easier to group. Bem can also be applied to other computer problems like file systems.</p>
 
-/* Block component */
-.btn {}
+<pre>
+  /* Block component */
+  .btn {}
+</pre>
 
-/* Element that depends upon the block */ 
-.btn__cancel {}
+<pre>
+  /* Element that depends upon the block */ 
+  .btn__cancel {}
+</pre>
 
-/* Modifier that changes the style of the block */
-.btn--danger {} 
-.btn--big {}
+<pre>
+  /* Modifier that changes the style of the block */
+  .btn--danger {} 
+  .btn--big {} 
+</pre>
+
 <h3>Always use transitions over javascript animations</h3>
-The reason for using css3 transformations over javascript animations is performance. First of all you offload all the graphics calculations to a different thread. Because css3 uses hardware acceleration you will be using the GPU instead. The performance increase is not much but it is some. Not all css animations benefit from the GPU boost also Transforms (scale, rotation, translation, and skew) and opacity are the main processes that use it.
+<p>
+  The reason for using css3 transformations over javascript animations is performance. First of all you offload all the graphics calculations to a different thread. Because css3 uses hardware acceleration you will be using the GPU instead. The performance increase is not much but it is some. Not all css animations benefit from the GPU boost also Transforms (scale, rotation, translation, and skew) and opacity are the main processes that use it.
+</p>
+
 
 <h2>Javascript </h2>
 <h3>ES5, ES6, Typescript</h3>
@@ -150,10 +177,13 @@ The reason for using css3 transformations over javascript animations is performa
   <li><strong>TypeScript</strong> provides an optional typing system while pulling in features from future versions of JavaScript (ES6 and ES7).</li>
 </ul>
 <blockquote>Note: a lot of the transpilers out there (i.e. babel, TypeScript) will allow you to use features from future versions of JavaScript today and exporting code that will still run in today's browsers.</blockquote>
-Loading in <head> vs <body>
+Loading in &lt;head&gt; vs &lt;body&gt;
 Put scripts in the <head> when they should happen before the page starts being rendered. Examples are things like HTML5 shim libraries or Modernizr.
 
-Put scripts in "ready" handlers when there's limited control over how the script is imported. Things like utilities that can be included on a page to unobtrusively add features generally use "ready" handlers because they can't be sure of how they'll be used.
+<p>
+  Put scripts in "ready" handlers when there's limited control over how the script is imported. Things like utilities that can be included on a page to unobtrusively add features generally use "ready" handlers because they can't be sure of how they'll be used.
+</p>
+
 
 Put scripts at the end of the <body> if you can get away with it in all other cases.
 <h3>Always use the ‘use strict” directive </h3>
