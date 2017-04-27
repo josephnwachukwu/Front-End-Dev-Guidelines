@@ -1,7 +1,7 @@
-Joes Front End Dev Guidelines
+# Front End Dev Guidelines 2017
 ========================
 
-# Front End Development Guidelines and Best Practices
+## Front End Development Guidelines and Best Practices
 
 ## Introduction
 
