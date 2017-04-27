@@ -30,6 +30,8 @@
 
 ### Choosing frameworks
 
+### Style Guides and Documentation
+
 ## JavaScipt
 
 ### Javascipt Best Practices
