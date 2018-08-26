@@ -46,9 +46,14 @@
 
 ### Mobile Best Practices
 
-### Testing
+## Testing
 
-## Code Coverage
+### Code Coverage
+
+Code coverage of 70-80% is a reasonable goal for system test of most projects with most coverage metrics. Use a higher goal for projects specifically organized for high testability or that have high failure costs. Minimum code coverage for unit testing can be 10-20% higher than for system testing.
+
+Introduction
+Empirical studies of real projects found that increasing code coverage above 70-80% is time consuming and therefore leads to a relatively slow bug detection rate. Your goal should depend on the risk assessment and economics of the project.
 
 ### Full Coverage Generally Impractical
 Although 100% code coverage may appear like a best possible effort, even 100% code coverage is estimated to only expose about half the faults in a system. Low code coverage indicates inadequate testing, but high code coverage guarantees nothing.
