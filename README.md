@@ -35,7 +35,16 @@
 ## JavaScipt
 
 ### Style Guide
-Use Basic rules similar to [JavaScript Standard Stye](https://standardjs.com/)
+
+Use Basic rules similar to [JavaScript Standard Stye](https://standardjs.com/) :
+
+* 2 spaces – for indentation
+* Single quotes for strings – except to avoid escaping
+* No unused variables – this one catches tons of bugs!
+* No semicolons
+* Always use === instead of == – but obj == null is allowed to check null || undefined.
+* Always handle the node.js err function parameter
+* Declare browser globals with /* global */ comment at top of file Prevents accidental use of vaguely-named browser globals like open, length, event, and name. Example: /* global alert, prompt */ Exceptions are: window, document, and navigator
 
 #### Frameworks
 
