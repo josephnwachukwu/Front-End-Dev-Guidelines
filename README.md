@@ -5,6 +5,12 @@
 
 This document contains the guidelines and best practices for a front-end web development team. It was created by compiling the most common best practices among the best development firms spanning many industry and company sizes.
 
+Each item here represents either:
+
+1. A reminder to follow existing standards or industry conventions,
+2. guidance on what constitutes professional patterns and organization, or
+3. a decision made favoring one method over its alternatives.
+
 ### Goals
 
 ### General Standards
