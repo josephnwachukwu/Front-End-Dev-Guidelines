@@ -1,4 +1,4 @@
-# Front End Dev Guidelines 2017
+# Front End Dev Guidelines 2018
 
 ## Front End Development Guidelines and Best Practices
 
