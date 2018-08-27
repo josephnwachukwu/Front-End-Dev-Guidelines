@@ -1,8 +1,9 @@
-# Front End Dev Guidelines 2018
+# Front End Development Guidelines and Best Practices 2018
 
-## Front End Development Guidelines and Best Practices
 
 ## Introduction
+
+This document contains the guidelines and best practices for a front-end web development team. It was created by compiling the most common best practices among the best development firms spanning many industry and company sizes.
 
 ### Goals
 
