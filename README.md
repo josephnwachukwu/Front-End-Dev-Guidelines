@@ -34,7 +34,8 @@
 
 ## JavaScipt
 
-### Javascipt Best Practices
+### Style Guide
+Use Basic rules similar to [JavaScript Standard Stye](https://standardjs.com/)
 
 #### Frameworks
 
