@@ -14,9 +14,6 @@
 
 #### NodeJs
 
-#### Webpack, Grunt, Gulp
-
-#### Choosing Frameworks
 
 #### Setting up Editors
 
@@ -31,6 +28,7 @@
 ### Choosing frameworks
 
 ### Style Guides and Documentation
+Aside from any branding guides that may be already avaialbe, It is suggested that you document your code with something like [Compodoc](https://github.com/compodoc/compodoc).
 
 ## JavaScript
 
