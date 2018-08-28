@@ -58,8 +58,49 @@ A clear, clean, and concise HTML structure is also necessary for semantics, flex
 Valid markup is a goal but not a mandate. However, be aware validation can be an excellent starting place while debugging a Web page — especially if the problems are unusual.
 
 ## CSS
+CSS is an unusual language which can easily lead to code bloat, inconsistencies in design or clashing code techniques. It is easy to end up with CSS code that is so fragile it can cause site-wide regressions with small changes.
+
+CSS should:
+
+* Be easy to maintain.
+* Follow clear enough patterns to understand.
+* Offer a clear place for new styles going forwards.
+* Not be a drag on page loading performance.
+* Not include unused style rules.
+* Address different devices, browser versions, and do as much as it can with as little code as possible.
+
+When setting up the CSS for a site, always consider:
+
+* What the default styles for HTML elements are going to be.
+* Which styles are global styles versus specific one-off use-cases.
+* Distinctions between code for layout and for content.
+* How the code will evolve and grow.
+* Potential impact of bug fixes on the overall site.
+* Use of images as CSS background images vs. in-line HTML (content).
 
 ### CSS Best Practices
+
+Before coding, you should always:
+
+* Review the design.
+* Plan around technical constraints.
+* Identify how content will be managed.
+* Be certain who will be able to modify the design directly via code.
+
+Try to segment code in logical ways:
+
+* Separate page grids and containers from the content.
+* Create baseline components which may be extended by other styles.
+* Baseline components should rarely be modified directly.
+
+More specifically, you may have:
+
+* Core brand styles.
+* Basic typography or default HTML rules.
+* Site-wide styles.
+* Distinct sections of the site.
+* Micro-sites and landing pages.
+* Components, widgets, or re-usable modules.
 
 ### Choosing frameworks
 
