@@ -25,6 +25,15 @@ Our motivations in creating this document are to:
 
 ### General Standards
 
+For any project:
+
+* Consistency and conventions between team members is paramount.
+* Solutions should be as simple and clear as possible.
+* Solutions should serve a specific purpose.
+* Clever code does not mean good code; readability is critical
+
+A key hallmark of professional code includes a notion that while we are writing code that must reach a desired goal, we are also creating code that must be read and understood by others.
+
 ### Deliverables
 
 ### Development
