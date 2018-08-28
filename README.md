@@ -5,6 +5,8 @@
 
 This document contains the guidelines and best practices for a front-end web development team. It was created by compiling the most common best practices among the best development firms spanning many industry and company sizes.
 
+This document is not intended to replace common sense, conventions requested by particular clients, teams, or prevent expressive or creative solutions to problems. Team or project-specific agreements or client requests will always supersede this document's content.
+
 Each item here represents either:
 
 1. A reminder to follow existing standards or industry conventions,
@@ -18,8 +20,8 @@ Our motivations in creating this document are to:
 1. Foster code consistency across our projects.
 2. Facilitate ease of maintenance.
 3. Ensure we create professional quality Web sites.
-Guide staff on-boarding or educate new developers.
-This document is not intended to replace common sense, conventions requested by particular clients, teams, or prevent expressive or creative solutions to problems. Team or project-specific agreements or client requests will always supersede this document's content.
+4. Guide staff on-boarding or educate new developers.
+
 
 ### General Standards
 
@@ -34,7 +36,13 @@ This document is not intended to replace common sense, conventions requested by 
 
 ## HTML
 
-### HTML Best Practices
+### HTML Markup Best Practices
+
+Please follow conventions established for a given project so all team members can have the same expectations around document structure and markup.
+
+Structural consistency is critical when talking about the types of pages being used on a site or in a Web app. The markup structure provides all the necessary hooks for scripting and behavior, so it's important that the appropriate hooks are in place.
+
+A clear, clean, and concise HTML structure is also necessary for semantics, flexibility, and a reliable deployment environment. Do not deviate from established templates or patterns without architect approval.
 
 ## CSS
 
