@@ -44,6 +44,10 @@ Structural consistency is critical when talking about the types of pages being u
 
 A clear, clean, and concise HTML structure is also necessary for semantics, flexibility, and a reliable deployment environment. Do not deviate from established templates or patterns without architect approval.
 
+#### Validation
+
+Valid markup is a goal but not a mandate. However, be aware validation can be an excellent starting place while debugging a Web page — especially if the problems are unusual.
+
 ## CSS
 
 ### CSS Best Practices
