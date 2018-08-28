@@ -34,13 +34,6 @@ For any project:
 
 A key hallmark of professional code includes a notion that while we are writing code that must reach a desired goal, we are also creating code that must be read and understood by others.
 
-### Deliverables
-
-### Development
-
-#### NodeJs
-
-
 #### Setting up Editors
 
 ## HTML
@@ -101,8 +94,6 @@ More specifically, you may have:
 * Distinct sections of the site.
 * Micro-sites and landing pages.
 * Components, widgets, or re-usable modules.
-
-### Choosing frameworks
 
 ### Style Guides and Documentation
 Aside from any branding guides that may be already avaialbe, It is suggested that you document your code with something like [Compodoc](https://github.com/compodoc/compodoc).
