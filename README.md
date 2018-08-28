@@ -34,8 +34,6 @@ For any project:
 
 A key hallmark of professional code includes a notion that while we are writing code that must reach a desired goal, we are also creating code that must be read and understood by others.
 
-#### Setting up Editors
-
 ## HTML
 
 ### HTML Markup Best Practices
