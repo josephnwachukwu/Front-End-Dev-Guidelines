@@ -566,6 +566,22 @@ Sublime Text users, check out
 [Package Control](http://wbond.net/sublime_packages/package_control)
 for autocomplete of JSDoc comments.
 
+### Source Control
+
+Use GitFlow
+
+```
+git checkout master
+git checkout -b develop
+git checkout -b feature_branch
+# work happens on feature branch
+git checkout develop
+git merge feature_branch
+git checkout master
+git merge develop
+git branch -d feature_branch
+```
+
 ### Code Coverage
 
 Code coverage of 70-80% is a reasonable goal for system test of most projects with most coverage metrics. Use a higher goal for projects specifically organized for high testability or that have high failure costs. Minimum code coverage for unit testing can be 10-20% higher than for system testing.
